@@ -1,6 +1,7 @@
 {
   "name": "e-sync",
   "private": true,
+  "homepage": "https://senmontoya.github.io/E-Sync",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

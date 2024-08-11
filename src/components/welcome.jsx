@@ -65,7 +65,8 @@ const Welcome = React.memo(() => {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <img src="public/LG-E-SYNC.png" className="h-12 w-auto" alt="E-SYNC Logo" />
+            <img src={`${process.env.PUBLIC_URL}/LG-E-SYNC.png`} className="h-12 w-auto" alt="E-SYNC Logo" />
+
             </a>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
