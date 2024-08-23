@@ -12,7 +12,8 @@ export default {
           'custom-yellow': '#E5A829',
           'custom-red': '#D02E2D',
           'custom-yellow-dark': '#e29a05',
-      },
+          'custom-red-dark': '#b13a0b'
+      },  
     },
   },
   plugins: [],

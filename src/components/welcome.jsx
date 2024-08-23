@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CheckIcon } from '@heroicons/react/20/solid';
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 const includedFeatures = [
   'Acceso Anticipado',
@@ -48,7 +49,7 @@ const animationStyle = `
   .animate-fadeIn {
     animation: fadeIn 0.5s ease-out;
   }
-`;
+`;      
 
 const Welcome = React.memo(() => {
   const [activeNav, setActiveNav] = useState('Bienvenida');
@@ -84,7 +85,7 @@ const Welcome = React.memo(() => {
   };
 
   return (
-    <>
+    <>  
       {/* Header */}
       <style>{animationStyle}</style>
       <header className="fixed inset-x-0 top-0 z-50  text-gray-900 shadow-md animate-slideDown backdrop-blur-md">
@@ -151,12 +152,12 @@ const Welcome = React.memo(() => {
                  sé parte de la acción y vive el espectáculo en primera fila con <span className='text-custom-blue font-bold'>E-Sync</span>.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="#"
+                <Link
+                  to='/login'
                   className="rounded-md bg-custom-yellow px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-custom-yellow-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Empezar
-                </a>
+                </Link>
                 <a href="#" className="text-sm font-semibold leading-6 text-custom-red">
                   Learn more <span aria-hidden="true">→</span>
                 </a>
@@ -316,6 +317,13 @@ const Welcome = React.memo(() => {
         </div>
       </section>
       {/* Fin Acerca De */}
+
+
+
+
+
+
+
     </>
   );
 });
