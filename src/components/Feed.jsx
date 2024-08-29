@@ -15,14 +15,14 @@ const slides = [
     {
         title: "Depresión Sonora",
         description: "Únete a Depresión Sonora para una noche intensa llena de emociones y melodías que exploran los rincones más profundos de la psicología humana. Este concierto promete una experiencia única, combinando letras profundas con una atmósfera melancolica    envolvente que resonará con cada asistente",
-        image: "public/Carolina-Durante.jpg",
-        poster: "public/DEPRESION-SONORA-2.jpg"
+        image: "/E-Sync/Carolina-Durante.jpg",
+        poster: "/E-Sync/DEPRESION-SONORA-2.jpg"
     },
     {
         title: "Bad Bunny",
         description: "Prepara tus sentidos para una explosión de energía y ritmo con Bad Bunny, el fenómeno global del reguetón. Con éxitos que han dominado las listas de música, este concierto ofrecerá un espectáculo vibrante y emocionante, lleno de luces, sonido y la inconfundible presencia de uno de los artistas más innovadores de la música urbana.",
-        image: "public/banner-bad-bunny-en-lima-2022-scaled.jpg",
-        poster: "public/7-badbunny-nadia-puspita.jpg"
+        image: "/E-Sync/banner-bad-bunny-en-lima-2022-scaled.jpg",
+        poster: "/E-Sync/7-badbunny-nadia-puspita.jpg"
     },
 ];
 
