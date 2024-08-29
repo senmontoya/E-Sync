@@ -19,6 +19,7 @@ const navigation = [
   { name: 'Suscripciones', href: '#subscripciones' },
   { name: 'Soporte', href: '#soporte' },
   { name: 'Acerca de E-SYNC', href: '#acerca-de' },
+  { name: 'Nuestros E-Syncers', href: '#clientes-satisfechos' },
 ];
 
 const animationStyle = `
@@ -79,10 +80,10 @@ const Welcome = React.memo(() => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setActiveNav(id);
-  };
+    const handleNavClick = (id) => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      setActiveNav(id);
+    };
 
   return (
     <>  
@@ -101,7 +102,7 @@ const Welcome = React.memo(() => {
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-semibold leading-6 ${
-                  activeNav === item.href.substring(1) ? 'text-custom-blue animate-fadeIn' : 'text-gray-700'
+                  activeNav === item.href.substring(1) ? 'text-custom-blue animate-fadeIn' : 'text-white'
                 }`}
                 onClick={(e) => {
                   e.preventDefault();
@@ -112,20 +113,13 @@ const Welcome = React.memo(() => {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-700">
-              Log in
-            </a>
-          </div>
+            
         </nav>
       </header>
       {/* Fin Header */}
 
       {/* Background Blur */}
-      <div
-        aria-hidden="true"    
-        className="fixed inset-0 -z-10 bg-gradient-to-tr from-[#1F647C] to-[#a93226] opacity-30 backdrop-blur-md"
-      />
+      <div aria-hidden="true" className="fixed inset-0 -z-10 bg-gradient-to-tr from-[#1F647C] to-[#a93226] backdrop-blur-md content-fade-in" />
       {/* Fin Background Blur */}   
 
       {/* Bienvenida */}
@@ -133,7 +127,7 @@ const Welcome = React.memo(() => {
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-2xl py-32 sm:py-40 lg:py-48">
             <div className="hidden sm:mb-5 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-700 ring-1 ring-black hover:ring-gray-400">
+              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 ring-black hover:ring-gray-400">
                 Politicas y condiciones sobre E-Sync.{' '}
                 <a href="#" className="font-semibold text-custom-red">
                   <span aria-hidden="true" className="absolute inset-0" />
@@ -145,7 +139,7 @@ const Welcome = React.memo(() => {
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 ¡Vive la emoción del entretenimiento en vivo!
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-700">
+              <p className="mt-6 text-lg leading-8 text-white">
                 En <span className='text-custom-blue font-bold'>E-Sync</span>, conectamos tu pasión con las experiencias más emocionantes del momento. Nuestra plataforma está 
                 diseñada para aquellos que buscan vivir la intensidad de los conciertos de los artistas más grandes, la adrenalina de los partidos de fútbol o la emoción de la NBA, Formula-1,
                  e incluso te traemos lo más impresionante de los torneos de E-sports entre muchos otros eventos de entretenimiento en vivo. Ofreciéndote acceso directo a los eventos más codiciados, todo de manera rápida, segura y confiable. <span className='font-bold'>NO TE QUEDES ATRÁS  </span>; 
@@ -154,7 +148,7 @@ const Welcome = React.memo(() => {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
                   to='/login'
-                  className="rounded-md bg-custom-yellow px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-custom-yellow-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-custom-yellow px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-custom-yellow-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Empezar
                 </Link>
@@ -174,7 +168,7 @@ const Welcome = React.memo(() => {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Obten nuestra membresía</h2>
-              <p className="mt-6 text-lg leading-8 text-gray-700">
+              <p className="mt-6 text-lg leading-8 text-white">
                 Conviértete en parte de una comunidad exclusiva que vive el entretenimiento en su máxima expresión.
               </p>
             </div>
@@ -210,7 +204,7 @@ const Welcome = React.memo(() => {
                     </p>
                     <a
                       href="#"
-                      className="mt-10 block w-full rounded-md bg-custom-yellow px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-custom-yellow-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className="mt-10 block w-full rounded-md bg-custom-yellow px-3 py-2 text-center text-sm font-semibold text-black shadow-sm hover:bg-custom-yellow-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                       Obtener Ahora
                     </a>
@@ -232,8 +226,8 @@ const Welcome = React.memo(() => {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
               <div className="max-w-xl lg:max-w-lg">
-                <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">¿Cómo podemos ayudarte?</h2>
-                <p className="mt-4 text-lg leading-8 text-black text-justify">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">¿Cómo podemos ayudarte?</h2>
+                <p className="mt-4 text-lg leading-8 text-white text-justify">
                   En <span className='text-custom-blue font-bold'>E-Sync</span>, nos dedicamos a ofrecerte una experiencia de entretenimiento excepcional, y eso incluye un soporte al 
                   cliente de primera calidad. Te enviaremos un correo al que nos brindaste en breve, asegurándonos de responder a tu consulta lo más pronto posible. Estamos aquí para 
                   ayudarte en cada paso del camino, porque tu satisfacción es nuestra máxima prioridad.
@@ -265,7 +259,7 @@ const Welcome = React.memo(() => {
                     <CalendarDaysIcon aria-hidden="true" className="h-6 w-6 text-custom-blue" />
                   </div>
                   <dt className="mt-4 font-semibold text-custom-red">Articulos Semanales</dt>
-                  <dd className="mt-2 leading-7 text-black text-justify">
+                  <dd className="mt-2 leading-7 text-white text-justify">
                     Además de nuestro soporte, recibirás artículos semanales directamente en tu correo. Estos artículos están diseñados para mantenerte informado sobre los últimos eventos, 
                     tendencias y consejos exclusivos que harán que tu experiencia en E-Sync sea aún mejor.
                   </dd>
@@ -275,7 +269,7 @@ const Welcome = React.memo(() => {
                     <HandRaisedIcon aria-hidden="true" className="h-6 w-6 text-custom-blue" />
                   </div>
                   <dt className="mt-4 font-semibold text-custom-red">No spam</dt>
-                  <dd className="mt-2 leading-7 text-black text-justify">
+                  <dd className="mt-2 leading-7 text-white text-justify">
                     Valoramos tu privacidad, por lo que puedes estar seguro de que solo recibirás correos relevantes. En E-Sync, no toleramos el spam; solo te enviaremos información útil y actualizaciones importantes relacionadas con tu experiencia.
                   </dd>
                 </div>
@@ -304,8 +298,8 @@ const Welcome = React.memo(() => {
                 />
               </div>
               <div className="mt-10 lg:mt-0 lg:ml-8 lg:w-1/2">
-                <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl">Acerca De <span className='text-custom-blue'>E-Sync</span></h2>
-                <p className="mt-6 text-lg leading-8 text-black text-justify">
+                <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Acerca De <span className='text-custom-blue'>E-Sync</span></h2>
+                <p className="mt-6 text-lg leading-8 text-white text-justify">
                   <span className='text-custom-blue font-bold'>E-Sync</span> es tu destino definitivo para el entretenimiento en vivo, ofreciendo una plataforma innovadora para la compra de boletos para los eventos más emocionantes del momento. en <span className='text-custom-blue font-bold'>E-Sync</span> tenemos algo para cada amante del espectáculo.
                   Fundada con la misión de transformar la forma en que experimentas el entretenimiento en vivo, <span className='text-custom-blue font-bold'>E-Sync</span> se dedica a brindarte una experiencia sin igual. Nuestra plataforma está diseñada para ofrecerte acceso rápido y seguro a los eventos que más te apasionan, con beneficios exclusivos para nuestros miembros a través del <span className='text-custom-red font-bold'>E-Pass</span>.
                   Nuestro compromiso es asegurar que cada compra sea sencilla, cada evento memorable, y cada experiencia, excepcional. Además, nuestro equipo de soporte al cliente está siempre listo para ayudarte en cada paso del camino, garantizando tu total satisfacción.
@@ -318,8 +312,135 @@ const Welcome = React.memo(() => {
       </section>
       {/* Fin Acerca De */}
 
-
-
+      {/*Clientes Satisfechos*/}
+      <section id='clientes-satisfechos' className="relative isolate overflow-hiddenpx-6 py-24 sm:py-32 lg:px-8">
+      <div className="absolute inset-0 -z-10" />
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Comprometidos con tu Experiencia</h2>
+                  <p className="mt-4 text-lg leading-8 text-white text-center">
+                    En <span className='text-custom-blue font-bold'>E-Sync</span>, nuestra misión es no solo establecer alianzas sólidas con organizadores de eventos, sino también asegurar la 
+                    completa fidelidad y satisfacción de nuestros clientes al comprar boletos. Descubre cómo hemos ayudado a nuestros usuarios a lograr sus objetivos y a crear experiencias 
+                    inolvidables.
+                  </p>
+          <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] blur-md sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
+          <div className="mx-auto max-w-2xl lg:max-w-4xl">
+            <img alt="" src="/E-Sync/LG-E-SYNC.png" className="mx-auto h-12" />
+            <figure className="mt-10">
+              <blockquote className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                <p>
+                <span className='text-custom-blue font-bold'>E-Sync</span> ha sido un cambio total para nuestra gestión de eventos musicales. La interfaz es intuitiva y el proceso de compra de entradas es fluido y sin complicaciones. Desde que comenzamos 
+                  a usar <span className='text-custom-blue font-bold'>E-Sync</span>, hemos visto un aumento en la satisfacción de nuestros clientes y una reducción en las incidencias relacionadas con la compra de entradas
+                </p>
+              </blockquote>
+              <figcaption className="mt-10">
+                <img
+                  alt=""
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  className="mx-auto h-10 w-10 rounded-full"
+                />
+                <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+                  <div className="font-semibold text-custom-blue">Laura Martínez</div>
+                  <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
+                    <circle r={1} cx={1} cy={1} />
+                  </svg>
+                  <div className="text-custom-yellow">Gerente de Eventos en MusicVibes</div>
+                </div>
+              </figcaption>
+              
+              </figure>
+              <figure className="mt-10">
+                <blockquote className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                  <p>
+                    Utilizar <span className='text-custom-blue font-bold'>E-Sync</span> para nuestros eventos de e-sports ha sido una de las mejores decisiones que hemos tomado. La plataforma nos ha permitido vender entradas de manera eficiente, y nuestros 
+                    asistentes están encantados con la experiencia de usuario. Además, el soporte al cliente es excepcional, siempre dispuestos a ayudar.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-10">
+                  <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    className="mx-auto h-10 w-10 rounded-full"
+                  />
+                  <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div className="font-semibold text-custom-blue">Andrés López</div>
+                    <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
+                      <circle r={1} cx={1} cy={1} />
+                    </svg>
+                    <div className="text-custom-yellow">Coordinador de Marketing en GameZone</div>
+                  </div>
+                </figcaption>
+                
+              </figure>
+              <figure className="mt-10">
+                <blockquote className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                  <p>
+                    Gracias a <span className='text-custom-blue font-bold'>E-Sync</span>, la venta de entradas para nuestros eventos deportivos se ha vuelto más fácil que nunca. La plataforma ofrece una variedad de opciones que se adaptan a nuestras 
+                    necesidades específicas, y la integración con nuestras campañas de marketing ha sido perfecta. No podríamos estar más satisfechos.
+                  </p>
+                </blockquote>
+                <figcaption className="mt-10">
+                  <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    className="mx-auto h-10 w-10 rounded-full"
+                  />
+                  <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div className="font-semibold text-custom-blue">María Fernández</div>
+                    <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
+                      <circle r={1} cx={1} cy={1} />
+                    </svg>
+                    <div className="text-custom-yellow">Directora de Comunicación en SportsWorld</div>
+                  </div>
+                </figcaption>
+              </figure> 
+              <figure className="mt-10">
+                <blockquote className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                  <p>
+                    He utilizado varias plataformas de venta de entradas a lo largo de los años, pero <span className='text-custom-blue font-bold'>E-Sync</span> se destaca por su facilidad de uso y funcionalidad. Nos ha permitido gestionar grandes volúmenes
+                    de entradas para conciertos y eventos masivos sin ningún problema. Definitivamente es una herramienta que recomendaría a otros organizadores de eventos.
+                  </p>
+                  </blockquote>
+                <figcaption className="mt-10">
+                  <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    className="mx-auto h-10 w-10 rounded-full"
+                  />
+                  <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div className="font-semibold text-custom-blue">Javier Ortega</div>
+                    <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
+                      <circle r={1} cx={1} cy={1} />
+                    </svg>
+                    <div className="text-custom-yellow">Productor de Eventos en LiveNation</div>
+                  </div>
+                </figcaption>
+                
+              </figure> 
+              <figure className="mt-10">
+                <blockquote className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                  <p>
+                  <span className='text-custom-blue font-bold'>E-Sync</span> nos ha dado la confianza que necesitábamos para manejar la venta de entradas de nuestros eventos más importantes. La plataforma es robusta y fiable, y nuestros clientes han 
+                  apreciado la experiencia de compra rápida y segura. Ha sido un verdadero aliado en nuestra estrategia de eventos.
+                  </p>
+                  </blockquote>
+                <figcaption className="mt-10">
+                  <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    className="mx-auto h-10 w-10 rounded-full"
+                  />
+                  <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+                    <div className="font-semibold text-custom-blue">Claudia Ruiz</div>
+                    <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
+                      <circle r={1} cx={1} cy={1} />
+                    </svg>
+                    <div className="text-custom-yellow">Coordinadora de Eventos en DreamStage</div>
+                  </div>
+                </figcaption>
+                
+              </figure> 
+      </div>
+    </section>
+    {/*Fin Clientes Satisfechos*/}
 
 
 
